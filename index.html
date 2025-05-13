@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>playstation451</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .hero {
+            background: linear-gradient(45deg, #2d2d2d, #1a1a1a);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .social-links a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #00ff88;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-title {
+            color: #00ff88;
+            margin-bottom: 1rem;
+        }
+
+        .project-description {
+            color: #cccccc;
+            margin-bottom: 1rem;
+        }
+
+        .project-link {
+            display: inline-block;
+            color: #ffffff;
+            text-decoration: none;
+            border: 1px solid #00ff88;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .project-link:hover {
+            background: #00ff88;
+            color: #1a1a1a;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #1a1a1a;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #00ff8862;
+        border-radius: 5px;
+        transition: background 0.3s ease;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #00cc6a;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="hero">
+                <h1>playstation451</h1>
+                <p>Developer</p>
+                <div class="social-links">
+                    <a href="https://discord.gg/NXBjMGHWPw">Discord</a>
+                    <a href="https://github.com/Xylara">GitHub</a>
+                </div>
+            </div>
+        </header>
+
+        <section class="organization">
+            <div class="social-links">
+                <a href="https://discord.gg/NXBjMGHWPw">Xylara Discord</a>
+                <a href="https://github.com/Xylara">Xylara GitHub</a>
+            </div>
+        </section>
+
+        <section class="projects">
+            <div class="project-card">
+                <h3 class="project-title">Xylara</h3>
+                <p class="project-description">A web proxy</p>
+                <a href="https://github.com/Xylara/Xylara" class="project-link">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h3 class="project-title">Serene</h3>
+                <p class="project-description">Self-hosted Discord alternative</p>
+                <a href="https://github.com/Xylara/Serene" class="project-link">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h3 class="project-title">Paragon</h3>
+                <p class="project-description">Game server management panel</p>
+                <a href="https://github.com/shithost/Paragon" class="project-link">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h3 class="project-title">Spectre</h3>
+                <p class="project-description">Dashboard for Pterodactyl and Airlink panel</p>
+                <a href="https://github.com/shithost/Spectre" class="project-link">View Project</a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
