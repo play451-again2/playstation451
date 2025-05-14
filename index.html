@@ -4,17 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>playstation451</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        :root {
+            --primary: #00ff88;
+            --secondary: #0cc;
+            --background: #1a1a1a;
+            --text: #ffffff;
+            --accent: #2d2d2d;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', sans-serif;
         }
 
         body {
-            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
-            color: #ffffff;
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
         }
 
         .container {
@@ -29,26 +39,40 @@
         }
 
         .hero {
-            background: linear-gradient(45deg, #2d2d2d, #1a1a1a);
-            padding: 4rem 0;
+            background: linear-gradient(45deg, var(--accent), var(--background));
+            padding: 6rem 0;
             text-align: center;
+            border-radius: 1rem;
+            margin: 2rem 0;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .social-links {
             display: flex;
             justify-content: center;
             gap: 2rem;
-            margin: 2rem 0;
+            margin: 3rem 0;
         }
 
         .social-links a {
-            color: #ffffff;
+            color: var(--text);
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
+            padding: 0.8rem 1.5rem;
+            border-radius: 0.8rem;
+            background: rgba(255, 255, 255, 0.1);
         }
 
         .social-links a:hover {
-            color: #00ff88;
+            background: var(--primary);
+            color: var(--background);
         }
 
         .projects {
@@ -60,63 +84,69 @@
 
         .project-card {
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
+            border-radius: 1rem;
             padding: 2rem;
-            transition: transform 0.3s ease;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .project-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
         .project-title {
-            color: #00ff88;
+            color: var(--primary);
             margin-bottom: 1rem;
+            font-size: 1.5rem;
         }
 
         .project-description {
             color: #cccccc;
             margin-bottom: 1rem;
+            font-size: 1rem;
         }
 
         .project-link {
             display: inline-block;
-            color: #ffffff;
+            color: var(--text);
             text-decoration: none;
-            border: 1px solid #00ff88;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            transition: background 0.3s ease;
+            border: 1px solid var(--primary);
+            padding: 0.8rem 1.5rem;
+            border-radius: 0.8rem;
+            transition: all 0.3s ease;
+            font-weight: 500;
         }
 
         .project-link:hover {
-            background: #00ff88;
-            color: #1a1a1a;
+            background: var(--primary);
+            color: var(--background);
         }
 
         footer {
             text-align: center;
             padding: 2rem 0;
             background: rgba(0, 0, 0, 0.3);
+            margin-top: 4rem;
         }
 
         ::-webkit-scrollbar {
-        width: 10px;
-    }
+            width: 10px;
+        }
 
-    ::-webkit-scrollbar-track {
-        background: #1a1a1a;
-    }
+        ::-webkit-scrollbar-track {
+            background: var(--background);
+        }
 
-    ::-webkit-scrollbar-thumb {
-        background: #00ff8862;
-        border-radius: 5px;
-        transition: background 0.3s ease;
-    }
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
 
-    ::-webkit-scrollbar-thumb:hover {
-        background: #00cc6a;
-    }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary);
+        }
     </style>
 </head>
 <body>
@@ -126,42 +156,35 @@
                 <h1>playstation451</h1>
                 <p>Developer</p>
                 <div class="social-links">
-                    <a href="https://discord.gg/NXBjMGHWPw">Discord</a>
-                    <a href="https://github.com/Xylara">GitHub</a>
+                    <a href="https://discord.gg/NXBjMGHWPw"><i class="fab fa-discord"></i> Discord</a>
+                    <a href="https://github.com/Xylara"><i class="fab fa-github"></i> GitHub</a>
                 </div>
             </div>
         </header>
-
-        <section class="organization">
-            <div class="social-links">
-                <a href="https://discord.gg/NXBjMGHWPw">Xylara Discord</a>
-                <a href="https://github.com/Xylara">Xylara GitHub</a>
-            </div>
-        </section>
 
         <section class="projects">
             <div class="project-card">
                 <h3 class="project-title">Xylara</h3>
                 <p class="project-description">A web proxy</p>
-                <a href="https://github.com/Xylara/Xylara" class="project-link">View Project</a>
+                <a href="https://github.com/Xylara/Xylara" class="project-link"><i class="fab fa-github"></i> View Project</a>
             </div>
 
             <div class="project-card">
                 <h3 class="project-title">Serene</h3>
                 <p class="project-description">Self-hosted Discord alternative</p>
-                <a href="https://github.com/Xylara/Serene" class="project-link">View Project</a>
+                <a href="https://github.com/Xylara/Serene" class="project-link"><i class="fab fa-github"></i> View Project</a>
             </div>
 
             <div class="project-card">
                 <h3 class="project-title">Paragon</h3>
                 <p class="project-description">Game server management panel</p>
-                <a href="https://github.com/shithost/Paragon" class="project-link">View Project</a>
+                <a href="https://github.com/shithost/Paragon" class="project-link"><i class="fab fa-github"></i> View Project</a>
             </div>
 
             <div class="project-card">
                 <h3 class="project-title">Spectre</h3>
                 <p class="project-description">Dashboard for Pterodactyl and Airlink panel</p>
-                <a href="https://github.com/shithost/Spectre" class="project-link">View Project</a>
+                <a href="https://github.com/shithost/Spectre" class="project-link"><i class="fab fa-github"></i> View Project</a>
             </div>
         </section>
     </div>
